@@ -1197,22 +1197,20 @@ Sample Output 1:
 
 """Дано натуральное число. Напишите программу, которая определяет, 
 является ли последовательность его цифр при просмотре справа налево упорядоченной по неубыванию."""
-n = int(input())
-num = n % 10
-Flag = True
-while n != 0:
-	last_digit = n % 10
-	if last_digit < num:
-		Flag = False
-	num = last_digit
-	n //= 10
-if Flag == True:
-	print('YES')
-else:
-	print('NO')
+# n = int(input())
+# num = n % 10
+# Flag = True
+# while n != 0:
+# 	last_digit = n % 10
+# 	if last_digit < num:
+# 		Flag = False
+# 	num = last_digit
+# 	n //= 10
+# if Flag == True:
+# 	print('YES')
+# else:
+# 	print('NO')
+#
+# from math import sqrt
 
-from math import sqrt
-
-num = sqrt(5)
-print(num)
 
