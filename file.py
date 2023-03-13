@@ -1210,7 +1210,66 @@ Sample Output 1:
 # 	print('YES')
 # else:
 # 	print('NO')
-#
-# from math import sqrt
 
+"""На вход программе подается число n>1. Напишите программу, которая выводит его наименьший отличный от 1 делитель."""
+# num = int(input())
+# for i in range(2, num + 1):
+# 	if num % i == 0:
+# 		print(i)
+# 		break
 
+"""На вход программе подается натуральное число n. Напишите программу, которая выводит числа от 1 до n включительно за исключением:
+чисел от 5 до 9 включительно;
+чисел от 17 до 37 включительно;
+чисел от 78 до 87 включительно."""
+# num = int(input())
+# for i in range(1, num+1):
+# 	if 5 <= i <= 9 or 17 <= i <= 37 or 78 <= i <= 87:
+# 		continue
+# 	print(i)
+
+"""Boolean4°. Даны два целых числа: А, В. Проверить истинность высказывания: «Справедливы неравенства А > 2 и В ≤ 3»."""
+# num1, num2 = int(input()), int(input())
+# if num1 > 2 and num2 <= 3:
+# 	print(True)
+# else:
+# 	print(False)
+
+"""Boolean6°. Даны три целых числа: А, В, С. Проверить истинность высказывания: «Справедливо двойное неравенство А < В < С"""
+# num1, num2, num3 = int(input()), int(input()), int(input())
+# if num1 < num2 < num3:
+# 	print(True)
+# else:
+# 	print(False)
+
+# count = 0
+# p = 1
+# for i in range(1, 11):
+#     x = int(input())
+#     if x > 0:
+#         p = p * x
+#         count = count + 1
+# if count < 10:
+# 	print('NO')
+# else:
+# 	print(count)
+# 	print(p)
+
+# max1 = -(10 ** 6)
+# total = 0
+# for i in range(1, 11):
+# 	x = int(input())
+# 	if 0 > x > max1:
+# 		total -= x
+# 		max1 = x
+# print(total)
+# print(max1)
+
+def countdown(i):
+	print(i)
+	if i <= 1:
+		return
+	else:
+		countdown(i-1)
+
+countdown(5)
