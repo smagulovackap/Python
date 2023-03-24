@@ -1265,11 +1265,114 @@ Sample Output 1:
 # print(total)
 # print(max1)
 
-def countdown(i):
-	print(i)
-	if i <= 1:
-		return
-	else:
-		countdown(i-1)
+"""Дано натуральное число n. Напишите программу, которая печатает численный треугольник с высотой равной n, 
+в соответствии с примером:
+1
+121
+12321
+1234321
+123454321
+..."""
 
-countdown(5)
+
+# num = int(input())
+# for i in range(1, num + 1):
+# 	for k in range(1, i + 1):
+# 		for j in range(k - 1, 1, -1):
+# 			print(k, j, end='')
+# 	print()
+
+# class Orange:
+# 	def __init__(self, w, c):
+# 		self.weight = w
+# 		self.color = c
+# 		self.mold = 0
+# 		print('Создано!')
+#
+# 	def rot(self, days, temp):
+# 		self.mold = days * temp
+#
+# or1 = Orange(18, 'black')
+# # or1.weight = 100
+# # or1.color = 'blue'
+# print(or1.mold)
+# or1.rot(10, 22)
+# print(or1.mold)
+
+# class Rectangle():
+# 	def __init__(self, w, l):
+# 		self.width = w
+# 		self.len = l
+#
+# 	def area(self):
+# 		return self.width * self.len
+#
+# 	def change_size(self, w, l):
+# 		self.width = w
+# 		self.len = l
+
+
+# class Apple():
+# 	def __init__(self, a, b, c, d):
+# 		self.absolute = a
+# 		self.barrier = b
+# 		self.courier = c
+# 		self.determination = d
+#
+# from math import pi
+# class Circle():
+# 	def __init__(self, r):
+# 		self.radius = r
+#
+# 	def area(self):
+# 		return pi * (self.radius ** 2)
+#
+# circle_area = Circle(5)
+# print(circle_area.area())
+
+# class Triangle():
+# 	def __init__(self, b, h):
+# 		self.base = b
+# 		self.height = h
+#
+# 	def area(self):
+# 		return 1/2 * self.base * self.height
+#
+# triangle = Triangle(4, 5)
+# print(triangle.area())
+
+# class Hexagon():
+# 	def __init__(self, a):
+# 		self.side = a
+#
+# 	def calculate_perimeter(self):
+# 		return 6 * self.side
+#
+# hexagon_side = Hexagon(6)
+# print(hexagon_side.calculate_perimeter())
+
+"""На вход программе подается одна строка. Напишите программу, которая выводит элементы строки с индексами 0, 2, 4, ... в столбик."""
+# text = input()
+# for i in range(0, len(text), 2):
+# 	print(text[i])
+
+"""На вход программе подается одна строка. Напишите программу, которая выводит в столбик элементы строки в обратном порядке."""
+# text = input()
+# for i in range(1, len(text) + 1):
+# 	print(text[-i])
+
+"""На вход программе подаются три строки: имя, фамилия и отчество. Напишите программу, которая выводит инициалы человека."""
+# name, surname, lastname = input(), input(), input()
+# print(name[0], surname[0], lastname[0], sep='')
+
+"""На вход программе подается одна строка состоящая из цифр. Напишите программу, которая считает сумму цифр данной строки"""
+# num = input()
+# total = 0
+# for i in range(len(num)):
+# 	last_digit = int(num) % 10
+# 	total += last_digit
+# 	num = int(num) // 10
+# print(total)
+
+"""На вход программе подается одна строка. Напишите программу, которая выводит сообщение «Цифра» (без кавычек), 
+если строка содержит цифру. В противном случае вывести сообщение «Цифр нет» (без кавычек)."""
