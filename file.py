@@ -1726,9 +1726,81 @@ n различных последовательностей кода Морзе.
 """Будем считать email адрес корректным, если в нем есть символ собачки (@) и точки. 
 Напишите программу проверяющую корректность email адреса."""
 
-email = input()
-b, c = '@', '.'
-if b in email and c in email:
-	print('YES')
-else:
-	print('NO')
+# email = input()
+# b, c = '@', '.'
+# if b in email and c in email:
+# 	print('YES')
+# else:
+# 	print('NO')
+
+"""На вход программе подается натуральное число n. Напишите программу, которая печатает звездную рамку размерами n×19."""
+# num = int(input())
+# for i in range(1, num + 1):
+# 	if i == 1 or i == num:
+# 		print('*' * 19)
+# 	else:
+# 		print('*' + ' ' * 17 + '*')
+
+"""Дано натуральное число n(n>99). Напишите программу, которая определяет его третью (с начала) цифру."""
+# num = int(input())
+# while num > 999:
+# 	num //= 10
+# print(num % 10)
+
+"""Дано натуральное число. Напишите программу, которая вычисляет:
+
+количество цифр 3 в нем;
+сколько раз в нем встречается последняя цифра;
+количество четных цифр;
+сумму его цифр, больших пяти;
+произведение цифр, больших семи (если цифр больших семи нет, то вывести 1, если такая цифра одна, то вывести ее);
+сколько раз в нем встречается цифры 0 и 5 (всего суммарно)."""
+
+# num = int(input())
+#
+# count_3, count_even, count_last, count_0_5 = 0, 0, 1, 0
+# total_more_than_5, multiple_more_than_7 = 0, 1
+# lastest = num % 10
+# flag = False
+#
+# while num != 0:
+# 	last_digit = num % 10
+# 	if last_digit == 3:
+# 		count_3 += 1
+# 	if last_digit % 2 == 0:
+# 		count_even += 1
+# 	if last_digit > 5:
+# 		total_more_than_5 += last_digit
+# 	if last_digit > 7:
+# 		flag = True
+# 		multiple_more_than_7 *= last_digit
+# 	if last_digit == 0 or last_digit == 5:
+# 		count_0_5 += 1
+# 	num //= 10
+# 	if lastest == num % 10:
+# 		count_last += 1
+#
+# print(count_3, count_last, count_even, total_more_than_5, multiple_more_than_7, count_0_5, sep='\n')
+
+"""Сриниваса Рамануджан – индийский математик, славившийся своей интуицией в области чисел. Когда английский математик 
+Годфри Харди навестил его однажды в больнице, он обмолвился, что номером такси, на котором он приехал, было 1729, 
+такое скучное и заурядное число. На что Рамануджан ответил: "Нет, нет! Это очень интересное число. Это наименьшее число, 
+выражаемое как сумма двух кубов двумя разными способами". Другими словами: 1729 = 1**3 + 12**3 = 9**3 + 10**3.
+Напишите программу, которая находит аналогичные интересные числа. В ответе запишите первые 5 чисел в порядке возрастания, включая число
+1729."""
+
+# import itertools
+#
+# count = 0
+# n = 1
+#
+# while count < 5:
+#     cubes = [i**3 for i in range(1, int(n**(1/3))+1)]
+#     sums = set(sum(pair) for pair in itertools.combinations(cubes, 2))
+#     interesting_sums = [s for s in sums if list(sums).count(s) > 1]
+#     for i_sum in interesting_sums:
+#         count += 1
+#         print(i_sum, '=', '^3 + '.join(str(c**(1/3)) for c in itertools.combinations(cubes, 2) if sum(c) == i_sum))
+#         if count >= 5:
+#             break
+#     n += 1
