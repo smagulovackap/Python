@@ -1618,7 +1618,6 @@ S.ljust(width, fillchar=" ") Делает длину строки не мень�
 
 S.rjust(width, fillchar=" ") Делает длину строки не меньшей width, по необходимости заполняя первые символы символом fillchar"""
 
-
 """На вход программе подается строка состоящая из имени и фамилии человека, разделенных одним пробелом. 
 Напишите программу, которая проверяет, что имя и фамилия начинаются с заглавной буквы."""
 # name = input()
@@ -1991,7 +1990,6 @@ n целых чисел. Напишите программу, которая с�
 """На вход программе подается натуральное число n и n строк, а затем число 
 k. Напишите программу, которая выводит k-ую букву из введенных строк на одной строке без пробелов."""
 
-
 """Пришлось немного помучиться с вводом числа k. У меня получилось так:
 1.вводим 1 число n через int
 2. вводим строки через позабытый цикл инпут s = [input() for _ in range(n)]
@@ -2000,13 +1998,97 @@ k. Напишите программу, которая выводит k-ую б�
 5. создаем пустышку для массива x = []
 6. а вот теперь уже пригодился x.extend(s[i]) 
 7. принт x[k - 1] с условием что k <= len(x), иначе "", не забываем в конце про end = """""
-n = int(input())
-res = [input() for _ in range(n)]
-k = int(input())
-for i in range(n):
-	x = list()
-	x.extend(res[i])
-	if k <= len(x):
-		print(x[k-1], end='')
-	else:
-		continue
+# n = int(input())
+# res = [input() for _ in range(n)]
+# k = int(input())
+# for i in range(n):
+# 	x = list()
+# 	x.extend(res[i])
+# 	if k <= len(x):
+# 		print(x[k-1], end='')
+# 	else:
+# 		continue
+
+"""На вход программе подается натуральное число n, а затем 
+n строк. Напишите программу, которая создает список из символов всех строк, а затем выводит его."""
+
+# n = int(input())
+# res = []
+# for i in range(n):
+# 	word = input()
+# 	res.extend(word)
+# print(res)
+
+# numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 'FFFFF', 10]
+#
+# for i in range(len(numbers)):
+#     print(numbers[i])
+
+# numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 'FFFAAA', 10]
+#
+# print(*numbers)
+
+# numbers = [1, 78, 23, -65, 99, 9089, 34, -32, 0, -67, 1, 11, 111]
+# counter = 0
+# for i in range(len(numbers)):
+# 	a = numbers[i]**2
+# 	counter += a
+# print(counter)
+
+# n = int(input())
+# num = [int(input()) for _ in range(n)]
+# res = []
+# for i in range(len(num)):
+# 	a = num[i]**2 + num[i]*2 + 1
+# 	res.append(a)
+# print(*num, sep='\n')
+# print()
+# print(*res, sep='\n')
+
+
+# n = int(input())
+# num = [int(input()) for _ in range(n)]
+# a = max(num)
+# b = min(num)
+# res = []
+# for i in range(len(num)):
+# 	if num[i] != a and num[i] != b:
+# 		res.append(num[i])
+# print(*res, sep='\n')
+
+# n = int(input())
+# text = [input() for _ in range(n)]
+# res = []
+# for i in range(len(text)):
+# 	a = text[i]
+# 	if a not in res:
+# 		res.append(a)
+# 	else:
+# 		continue
+# print(*res, sep='\n')
+#
+# n = int(input())
+# text = [input() for _ in range(n)]
+# search = input()
+# res = []
+# for i in range(len(text)):
+# 	if search.lower() in text[i].lower():
+# 		res.append(text[i])
+# 	else:
+# 		continue
+# print(*res, sep='\n')
+
+ntext = int(input())
+text = [input() for _ in range(ntext)]
+nsearch = int(input())
+search = str.[input() for _ in range(nsearch)]
+
+res = []
+for i in range(len(search)):
+	for j in range(len(text)):
+		a = search
+		if a.lower() in text[j].lower():
+			res.append(text[i])
+		else:
+			continue
+print(*res, sep='\n')
