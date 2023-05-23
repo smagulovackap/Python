@@ -2078,17 +2078,152 @@ n строк. Напишите программу, которая создает
 # 		continue
 # print(*res, sep='\n')
 
-ntext = int(input())
-text = [input() for _ in range(ntext)]
-nsearch = int(input())
-search = str.[input() for _ in range(nsearch)]
+# ntext = int(input())
+# text = [input() for _ in range(ntext)]
+# nsearch = int(input())
+# search = str.[input() for _ in range(nsearch)]
+#
+# res = []
+# for i in range(len(search)):
+# 	for j in range(len(text)):
+# 		a = search
+# 		if a.lower() in text[j].lower():
+# 			res.append(text[i])
+# 		else:
+# 			continue
+# print(*res, sep='\n')
 
-res = []
-for i in range(len(search)):
-	for j in range(len(text)):
-		a = search
-		if a.lower() in text[j].lower():
-			res.append(text[i])
-		else:
-			continue
-print(*res, sep='\n')
+# text = input()
+# res = text.split()
+# print(*res, sep='\n')
+
+# fullname = input().split()
+# for i in range(len(fullname)):
+# 	print(fullname[i][0], end='.')
+
+# path = input()
+# seppath = path.split('\\')
+# print(*seppath, sep='\n')
+
+# text = str(input()).split()
+# for i in range(len(text)):
+# 	print(int(text[i])*'+', sep='\n')
+
+# text = input().split('.')
+# flag = True
+# for i in text:
+# 	if int(i) > 255:
+# 		flag = False
+# 		break
+# 	else:
+# 		flag = True
+#
+# if flag:
+# 	print('ДА')
+# else:
+# 	print('НЕТ')
+
+# text = list(input())
+# separator = input()
+# s = separator.join(text)
+# print(s)
+
+# def insert_separator(text, separator):
+#     characters = list(text)  # Разбиваем строку на отдельные символы
+#     separated_text = separator.join(characters)  # Объединяем символы с разделителем
+#     return separated_text
+#
+# # Пример использования
+# input_text = input("Введите текст: ")
+# input_separator = input("Введите разделитель: ")
+#
+# result = insert_separator(input_text, input_separator)
+# print("Результат:", result)
+
+# text = input().split()
+# counter = 0
+# for i in range(len(text)):
+# 	for j in range(i+1, len(text)):
+# 		if text[i] == text[j]:
+# 			counter += 1
+# print(counter)
+
+# numbers = [8, 9, 10, 11]
+# numbers.pop(1)
+# numbers.insert(1, 17)
+# for i in range(4, 7):
+#     numbers.append(i)
+# numbers.pop(0)
+# numbers_copy = numbers.copy()
+# numbers.extend(numbers_copy)
+# numbers.insert(3, 25)
+# print(numbers)
+
+# text = input().split()
+# for i in range(len(text)):
+# 	text[i] = int(text[i])
+# first = text.index(min(text))
+# sec = text.index(max(text))
+# text[first], text[sec] = text[sec], text[first]
+# res = ' '.join(map(str, text))
+# print(res)
+
+# text = input().split()
+# cnt1 = text.count('a')
+# cnt2 = text.count('an')
+# cnt3 = text.count('the')
+# cnt4 = text.count('An')
+# cnt5 = text.count('The')
+# cnt6 = text.count('A')
+# so = [cnt1, cnt2, cnt3, cnt4, cnt5, cnt6]
+# res = sum(so)
+# print('Общее количество артиклей:', res)
+
+# sp = input().lower().split()
+# a = sp.count("a") + sp.count("an") + sp.count("the")
+# print("Общее количество артиклей:", a)
+#
+# s = input().lower().split()
+# print(f'Общее количество артиклей: {s.count("a") + s.count("an") + s.count("the")}')
+
+"""Немалоизвестный в пустошах Мохаве Курьер забрел в Хидден-Вэли – секретный бункер Братства Стали, и любезно соглашается помочь им в решении их проблем. Одной из такой проблем являлся странный компьютерный вирус, который проявлялся в виде появления комментариев к программам на терминалах Братства Стали. Известно, что программисты Братства никогда не оставляют комментарии к коду, и пишут программы на Python, поэтому удаление всех этих комментариев никак не навредит им. Помогите писцу Ибсену удалить все комментарии из программы.
+
+Формат входных данных
+На первой строке вводится символ решётки и сразу же натуральное число n — количество строк в программе, не считая первой. Далее следует n строк кода.
+
+Формат выходных данных
+Нужно вывести те же строки, но удалить комментарии и символы пустого пространства в конце строк. Пустую строку вместо первой строки ввода выводить не надо."""
+
+# def remove_comments(program):
+#     result = []
+#     for line in program:
+#         words = line.split(' ')
+#         clean_words = []
+#         for word in words:
+#             if word.startswith('#'):
+#                 break  # Пропускаем комментарии
+#             clean_words.append(word)
+#         clean_line = ' '.join(clean_words).rstrip()
+#         result.append(clean_line)
+#     return result
+#
+# # Чтение входных данных
+# n = int(input()[1:])  # Получаем количество строк программы
+# program = []
+# for _ in range(n):
+#     program.append(input())
+#
+# # Удаление комментариев
+# clean_program = remove_comments(program)
+#
+# # Вывод результата
+# for line in clean_program:
+#     print(line)
+
+numbers = input().split()
+for i in range(len(numbers)):
+    numbers[i] = int(numbers[i])
+numbers.sort()
+print(*numbers)
+numbers.sort(reverse=True)
+print(*numbers)
