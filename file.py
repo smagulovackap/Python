@@ -2220,10 +2220,302 @@ n строк. Напишите программу, которая создает
 # for line in clean_program:
 #     print(line)
 
-numbers = input().split()
-for i in range(len(numbers)):
-    numbers[i] = int(numbers[i])
-numbers.sort()
-print(*numbers)
-numbers.sort(reverse=True)
-print(*numbers)
+# numbers = input().split()
+# for i in range(len(numbers)):
+#     numbers[i] = int(numbers[i])
+# numbers.sort()
+# print(*numbers)
+# numbers.sort(reverse=True)
+# print(*numbers)
+
+# squares = [i ** 2 for i in range(1, int(input()) + 1)]
+# print(*squares, sep='\n')
+
+# nums = input()
+# numbers = [int(j) for j in nums.split()]
+# cubes = [i**3 for i in numbers]
+# print(*cubes)
+
+# print(*[i for i in input().split()], sep='\n')
+
+# text = input()
+# digits = [char for char in text if char.isdigit()]
+# print(*digits, sep='')
+
+
+# nums = input()
+# numbers = [int(j) for j in nums.split() if int(j) % 2 == 0]
+# squares = [i ** 2 for i in numbers]
+# res = [k for k in squares if k % 10 != 4]
+# print(*
+
+"""Пузырьковая сортировка"""
+# a = [1, 7, -3, 9, 0, -67, 34, 12, 45, 1000, 6,  8, -2, 99]
+# n = len(a)
+#
+# for i in range(n - 1):
+#     for j in range(n - i - 1):
+#         if a[j] > a[j + 1]:                  # если порядок элементов пары неправильный
+#             a[j], a[j + 1] = a[j + 1], a[j]  # меняем элементы пары местами
+#
+# print('Отсортированный список:', a)
+
+"""На вход программе подается строка текста. Напишите программу, которая удаляет из нее все символы с индексами 
+кратными 3, то есть символы с индексами 0, 3, 6, ...."""
+# text = input()
+# for i in range(len(text)):
+# 	if i % 3 == 0:
+# 		continue
+# 	print(text[i], end='')
+
+"""На вход программе подается строка текста. Напишите программу, которая заменяет все вхождения цифры 1 на слово «one»."""
+# text = input()
+# print(text.replace('1', 'one'))
+
+"""На вход программе подается строка текста. Напишите программу, которая удаляет все вхождения символа «@»."""
+# text = input()
+# a = text.replace('@', ' ')
+# b = a.replace(' ', '')
+# print(b)
+
+"""На вход программе подается строка текста. Напишите программу, которая выводит индекс второго вхождения буквы «f». 
+Если буква «f» встречается только один раз, выведите число -1, а если не встречается ни разу, выведите число -2."""
+# text = input()
+# a = text.find('f')
+# b = text.find('f', a+1)
+# c = text.count('f')
+# if c == 1:
+# 	print('-1')
+# elif c > 1:
+# 	print(b)
+# elif c == 0:
+# 	print('-2')
+
+# s = input()
+# if 'f' not in s:
+#     print(-2)
+# else:
+#     print(s.replace('f', '0', 1).find('f'))
+
+"""На вход программе подается строка текста в которой буква «h» встречается как минимум два раза. 
+Напишите программу, которая возвращает исходную строку и переворачивает последовательность символов, заключенную между первым и последним вхождением буквы «h»."""
+# text = input()
+# a = text.find('h')
+# b = text.rfind('h')
+# print(text[:a] + text[b:a:-1] + text[b:])
+
+# n = int(input())
+# res = []
+# for i in range(2, n+1, 2):
+# 	res.append(i)
+# print(res)
+
+"""На вход программе подаются две строки текста, содержащие целые числа. Из данных строк формируются списки чисел L и M. 
+Напишите программу, которая создает третий список, элементами которого являются суммы соответствующих элементов списков L и M. 
+Далее программа должна вывести каждый элемент полученного списка на одной строке через 1 пробел."""
+# a = [int(i) for i in input().split()]
+# b = [int(i) for i in input().split()]
+# res = []
+# for i in range(len(a)):
+# 	c = a[i] + b[i]
+# 	res.append(c)
+# print(*res, end='')
+
+# a = [int(i) for i in input().split()]
+# total = sum(a)
+# for i in range(len(a)):
+# 	a[i] = str(a[i])
+# res = '+'.join(a)
+# print(res, '=', total, sep='')
+
+# phone = input().split('-')
+# if ''.join(phone).isdigit():
+# 	if (phone[0] == '7' and len(phone[1]) == 3 and len(phone[2]) == 3 and len(phone[3]) == 4) or (len(phone[0]) == 3 and len(phone[1]) == 3 and len(phone[2])):
+# 		print('YES')
+# 	else:
+# 		print('NO')
+# else:
+# 	print('NO')
+# 	quit()
+
+
+
+# import re
+#
+# # Ввод строки текста
+# phone_number = input()
+#
+# # Проверка корректности телефонного номера с помощью регулярного выражения
+# pattern = r"^(?:[7-9]-)?[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+# match = re.match(pattern, phone_number)
+#
+# # Вывод результата
+# if match:
+#     print("YES")
+# else:
+#     print("NO")
+
+# num = [i for i in input().split(' ')]
+# counter = 1
+# for i in range(len(num)):
+# 	if len(num[i]) > counter:
+# 		counter = len(num[i])
+# print(counter)
+
+# text = input()
+# new_text = text.split()
+# transformed_words = [word[1:] + word[0] + "ки" for word in new_text]
+# result = ' '.join(transformed_words)
+# print(result)
+
+"""FUNCTIONS"""
+
+# def draw_box():
+# 	print('*' * 10)
+# 	for _ in range(12):
+# 		print('*' + ' ' * 8 + '*')
+# 	print('*' * 10)
+#
+# draw_box()
+
+# def draw_triangle():
+# 	for i in range(1, 11):
+# 		print(i * '*')
+#
+# draw_triangle()
+#
+# def draw_something(height, width):
+# 	for _ in range(height):
+# 		print('*' * width)
+#
+# draw_something(6, 9)
+#
+# def print_hello(n):
+# 	print('Hello' * n)
+#
+# print_hello(5)
+#
+# def print_text(txt, n):
+# 	print(txt * n)
+#
+# print_text('Smthng', 2)
+#
+# text = 'Some static text'
+# times = 5
+#
+# print_text(text, times)
+
+# def draw_triangle(fill, base):
+# 	for i in range(1, (base // 2) + 2):
+# 		print(fill * i)
+# 	for j in range(base // 2, 0, -1):
+# 		print(fill * j)
+#
+# fill, base = input(), int(input())
+# draw_triangle(fill, base)
+
+# def print_fio(name, surname, lastname):
+# 	print(surname[0], name[0], lastname[0], end='', sep='')
+#
+# name, surname, lastname = input().upper(), input().upper(), input().upper()
+# print_fio(name, surname, lastname)
+
+# def print_digit_sum(num):
+# 	new_list = [int(i) for i in str(num)]
+# 	result = sum(new_list)
+# 	print(result)
+#
+# n = input()
+# print_digit_sum(n)
+
+# def convert_to_miles(km):
+# 	return km * 0.6214
+#
+# km = int(input())
+#
+# print(convert_to_miles(km))
+
+# def get_factors(num):
+# 	result = []
+# 	for i in range(1, num + 1):
+# 		if num % i == 0:
+# 			result.append(i)
+# 	return result
+#
+# num = int(input())
+# print(get_factors(num))
+#
+# def get_factors_count(num):
+# 	counter = 0
+# 	for i in range(1, num + 1):
+# 		if num % i == 0:
+# 			counter += 1
+# 	return counter
+#
+# num = int(input())
+# print(get_factors_count(num))
+
+# def find_all(target, symbol):
+# 	result = []
+# 	for i in range(len(target)):
+# 		if target[i] == symbol:
+# 			result.append(i)
+# 	return result
+#
+# target, symbol = input(), input()
+# print(find_all(target, symbol))
+
+# def merge(list1, list2):
+# 	result = sorted(list1 + list2)
+# 	return result
+#
+# list1, list2 = [int(i) for i in input().split()], [int(i) for i in input().split()]
+# print(merge(list1, list2))
+
+# def quick_merge():
+# 	n = int(input())
+# 	result = []
+# 	for _ in range(n):
+# 		numbers = input().split()
+# 		result.extend(numbers)
+# 	for i in range(len(result)):
+# 		result[i] = int(result[i])
+# 	result.sort()
+# 	for j in range(len(result)):
+# 		result[j] = str(result[j])
+# 	finish = ' '.join(result)
+# 	print(finish)
+#
+# quick_merge()
+
+# def quick_merge(n):
+#     s = []
+#     for i in range(n):
+#         n = [int(i) for i in input().split()]
+#         s += n
+#     s.sort()
+#     return s
+#
+# n = int(input())
+# print(*quick_merge(n))
+
+# def is_valid_triangle(side1, side2, side3):
+# 	if side1 < (side2 + side3) and side2 < (side1 + side3) and side3 < (side1 + side2):
+# 		return True
+# 	else:
+# 		return False
+#
+# s1, s2, s3 = int(input()), int(input()), int(input())
+# print(is_valid_triangle(s1, s2, s3))
+
+def is_prime(num):
+	if num == 1:
+		return False
+	for i in range(2, num):
+		if num % i == 0:
+			return False
+		else:
+			return True
+
+num = int(input())
+print(is_prime(num))
