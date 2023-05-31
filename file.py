@@ -1,5 +1,5 @@
-""" На вход программе подается строка текста – имя человека. Напишите программу, 
-которая выводит на экран приветствие в виде слова «Привет» (без кавычек), 
+""" На вход программе подается строка текста – имя человека. Напишите программу,
+которая выводит на экран приветствие в виде слова «Привет» (без кавычек),
 после которого должна стоять запятая и пробел, а затем введенное имя. """
 # name = input()
 # print('Привет, ', name)
@@ -220,7 +220,7 @@ Nный член геометрической прогрессии - Bn = B1 * q
 # remainder = people % 2
 # print(people // 2 + remainder)
 
-# people = int(input()) 
+# people = int(input())
 # if people % 2 == 0:
 #     print (people // 2)
 # else:
@@ -2508,14 +2508,168 @@ n строк. Напишите программу, которая создает
 # s1, s2, s3 = int(input()), int(input()), int(input())
 # print(is_valid_triangle(s1, s2, s3))
 
-def is_prime(num):
-	if num == 1:
-		return False
-	for i in range(2, num):
-		if num % i == 0:
-			return False
-		else:
-			return True
+# объявление функции
+# def is_prime(num):
+#     if num == 1:
+#         return False
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+#     return True
 
-num = int(input())
-print(is_prime(num))
+# # считываем данные
+# n = int(input())
+#
+# # вызываем функцию
+# print(is_prime(n))
+
+
+# def is_prime(n):
+#     if n == 1:
+#         return False
+#     for i in range(2, n):
+#         if n % i == 0:
+#             return False
+#     return True
+# def get_next_prime(num):
+# 	next_prime = num + 1
+# 	while True:
+# 		if is_prime(next_prime):
+# 			return next_prime
+# 		next_prime += 1
+#
+# num = int(input())
+# print(get_next_prime(num))
+
+# def is_password_good(password):
+# 	if len(password) < 8:
+# 		return False
+#
+# 	f1, f2, f3 = False, False, False
+#
+# 	for i in password:
+# 		if i.isdigit():
+# 			f1 = True
+# 		if i.islower():
+# 			f2 = True
+# 		if i.isupper():
+# 			f3 = True
+#
+# 	return f1 * f2 * f3
+#
+# txt = input()
+# a = is_password_good(txt)
+# if a == 1:
+# 	print(True)
+# else:
+# 	print(False)
+
+# def is_one_away(word1, word2):
+# 	if len(word1) == len(word2):
+# 		counter = 0
+# 		for i in range(len(word1)):
+# 			if word1[i] == word2[i]:
+# 				counter += 1
+# 		if len(word1) - counter == 1:
+# 			return True
+# 	return False
+#
+# txt1 = input()
+# txt2 = input()
+#
+# print(is_one_away(txt1, txt2))
+
+# def is_palindrome(text):
+# 	return text == text[::-1]
+
+# txt = input()
+# print(is_palindrome(txt))
+#
+# def is_valid_password(password):
+# 	password = password.split(':')
+# 	if len(password) > 3:
+# 		return False
+# 	for _ in range(len(password)):
+# 		if is_palindrome(str(password[0])) and is_prime(int(password[1])) and int(password[2]) % 2 == 0:
+# 			return True
+# 		else:
+# 			return False
+#
+# password = input()
+# print(is_valid_password(password))
+
+# def is_correct_bracket(text):
+# 	counter = 0
+#
+# 	for i in text:
+# 		if i == '(':
+# 			counter += 1
+# 		elif i == ')':
+# 			counter -= 1
+# 		if counter < 0:
+# 			return False
+# 	if counter == 0:
+# 		return True
+# 	else:
+# 		return False
+#
+# brackets = input()
+# print(is_correct_bracket(brackets))
+
+# def convert_to_pyhton_case(text):
+# 	s = text[0].lower()
+# 	for i in text[1:]:
+# 		if i.isupper():
+# 			s = s + '_' + i.lower()
+# 		else:
+# 			s += i
+# 	return s
+#
+# anytext = input()
+# print(convert_to_pyhton_case(anytext))
+
+# def get_middle_point(x1, y1, x2, y2):
+# 	a = (x1 + x2) / 2
+# 	b = (y1 + y2) / 2
+# 	return a, b
+#
+# x_1, y_1 =int(input()), int(input())
+# x_2, y_2 = int(input()), int(input())
+# x, y = get_middle_point(x_1, y_1, x_2, y_2)
+# print(x, y)
+
+# from math import pi
+# def get_circle(radius):
+# 	c = 2 * pi * radius
+# 	s = pi * (radius ** 2)
+#
+# 	return c, s
+#
+# r = float(input())
+#
+# lenght, square = get_circle(r)
+# print(lenght, square)
+
+from math import sqrt
+
+def solve(a, b, c):
+	D = b ** 2 - 4 * a * c
+	res = []
+	if D > 0:
+		x1 = (-b + sqrt(D)) / (2 * a)
+		x2 = (-b - sqrt(D)) / (2 * a)
+		res.append(x1)
+		res.append(x2)
+	elif D == 0:
+		x = -b / (2 * a)
+		res.append(x)
+		res.append(x)
+	res.sort()
+	return res
+
+# считываем данные
+a, b, c = int(input()), int(input()), int(input())
+
+# вызываем функцию
+x1, x2 = solve(a, b, c)
+print(x1, x2)
